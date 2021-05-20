@@ -15,28 +15,24 @@ cryptoMaterial.certPath=conf
 network.peers[0]=127.0.0.1:20200
 #network.peers[1]=127.0.0.1:20201
 
+### Contract configuration
+contract.helloWorldAddress=
+
 ### System configuration
 system.groupId=1
 system.privateKey=
 
-### Contract configuration
-contract.helloWorldAddress=
-
 ### Springboot configuration
 server.port=8080
-server.session.timeout=60
-banner.charset=UTF-8
-spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
-spring.jackson.time-zone=GMT+8
-
 
 ```
 其中：
 - java sdk configuration配置部分与[javasdk](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/java_sdk/configuration.html)配置一致。
     * 其中需要用户将network.peers[0]=127.0.0.1:20200更换成实际的链节点监听地址。
+- Contract confguration包含合约配置，用户需要更换成前面部署过的合约地址。
 - System configuration包含群组、私钥等配置。
     * system.hexPrivateKey是16进制的私钥明文，可在测试用例中的keyGeneration生成。如果为空，会随机生成一个。
-- Contract confguration包含合约配置，用户需要更换成前面部署过的合约地址。
+
 
 
 ## 4. 编译和运行
